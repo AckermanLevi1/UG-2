@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Centralized Data</title>
+</head>
+<body>
+    <h1>Centralized Database</h1>
+    <ul>
+        {% for data in centralized_data %}
+        <li>
+            <strong>Shipment ID:</strong> {{ data.shipment_id }}<br>
+            <strong>Location:</strong> {{ data.location }}<br>
+            <strong>Status:</strong> {{ data.status }}<br>
+            <strong>Timestamp:</strong> {{ data.timestamp }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Blockchain</h1>
+    <ul>
+        {% for block in chain %}
+        <li>
+            <strong>Block {{ block.index }}</strong><br>
+            Data: {{ block.data }}<br>
+            Device: {{ block.device }}<br>
+            Hash: {{ block.hash }}<br>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
